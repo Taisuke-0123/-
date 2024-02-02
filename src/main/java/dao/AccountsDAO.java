@@ -52,8 +52,7 @@ public class AccountsDAO {
 		return account;
 	}
 	public void saveToDatabase(String userId, String pass, String petName, String animals, LocalDate petBd) {
-        // ここでデータベースへの保存処理を実行
-        // 使用するデータベースの種類に応じてJDBCやHibernate等を利用
+        // データベースへの保存処理を実行
 		// JDBCドライバを読み込む
         try {
             Class.forName("org.h2.Driver");

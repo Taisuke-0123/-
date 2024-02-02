@@ -8,5 +8,10 @@ public class LoginLogic {
 		Account account = dao.findByLogin(login);
 		return account !=null;
 	}
+	
+	public Account getAccountDetails(Login login) {
+        AccountsDAO dao = new AccountsDAO();
+        return dao.findByLogin(login);
+    }
 
 }

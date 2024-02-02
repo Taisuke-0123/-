@@ -1,6 +1,8 @@
 package servlet;
 
 import java.io.IOException;
+import java.time.LocalDate;
+import java.time.Period;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -10,6 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import model.Account;
 import model.Login;
 import model.LoginLogic;
 
@@ -60,10 +63,28 @@ public class LoginServlet extends HttpServlet {
 			HttpSession session = request.getSession();
 			session.setAttribute("userId", userId);
 			
+			// ペット名をaccountインスタンスから取得してセッションスコープに保存
+		    Account account = bo.getAccountDetails(login);
+		    String petName = account.getPetName();
+		    session.setAttribute("petName", petName);
+		    
+		    //ペットの誕生日をaccountインスタンスから取得してセッションスコープに保存
+		    //Account account = bo.getAccountDetails(login);
+		    LocalDate petBd = account.getPetBd();
+		    session.setAttribute("petBd", petBd);
+		    
+		    //ペットの誕生日から年齢をセッションスコープに保存
+		    LocalDate currentDate = LocalDate.now();
+		    Period age = Period.between(petBd, currentDate);
+		    int ageYears = age.getYears();
+		    int ageMonth = age.getMonths();
+		    session.setAttribute("ageYears", ageYears);
+		    session.setAttribute("ageMonth", ageMonth);
+			
 			//フォワード
 			RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/jsp/loginOK.jsp");
 			dispatcher.forward(request, response);
-			doGet(request, response);
+			
 		}else {//ログイン失敗時
 			//リダイレクト
 			response.sendRedirect("LoginServlet");
