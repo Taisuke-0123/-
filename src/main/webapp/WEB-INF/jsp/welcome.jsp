@@ -9,7 +9,7 @@
 <body>
 <ul>
 <li><a href="LoginServlet">ログイン</a></li>
-<li>ユーザー登録</li>
+<li><a href="SignUpServlet">ユーザー登録</li>
 </ul>
 </body>
 </html>
