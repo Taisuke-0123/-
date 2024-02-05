@@ -69,7 +69,6 @@ public class LoginServlet extends HttpServlet {
 		    session.setAttribute("petName", petName);
 		    
 		    //ペットの誕生日をaccountインスタンスから取得してセッションスコープに保存
-		    //Account account = bo.getAccountDetails(login);
 		    LocalDate petBd = account.getPetBd();
 		    session.setAttribute("petBd", petBd);
 		    
@@ -80,6 +79,9 @@ public class LoginServlet extends HttpServlet {
 		    int ageMonth = age.getMonths();
 		    session.setAttribute("ageYears", ageYears);
 		    session.setAttribute("ageMonth", ageMonth);
+		    
+		    //ログイン成功画面をセッションスコープに保存
+		    session.setAttribute("returnToPage", "WEB-INF/jsp/loginOK.jsp");
 			
 			//フォワード
 			RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/jsp/loginOK.jsp");

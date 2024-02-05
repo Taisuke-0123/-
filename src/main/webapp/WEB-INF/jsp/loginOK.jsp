@@ -12,6 +12,16 @@
 <p><c:out value="${petName}"/>ちゃん</p>
 <p><c:out value="${petBd}"/></p>
 <p><c:out value="${ageYears}"/>歳<c:out value="${ageMonth}"/>か月</p>
-<a href="WelcomeServlet">トップへ</a>
+<form action="CheckerServlet" method="post">
+	<label for="keywords">キーワード選択:</label>
+        <select name="keywords" id="keywords">
+            <option value="危険度：大">危険度：大</option>
+            <option value="危険度：中">危険度：中</option>
+            <option value="危険度：小">危険度：小</option>
+        </select>
+        <br>
+        <input type="submit" value="検索">
+</form>
+<a href="WelcomeServlet">ログアウト</a>
 </body>
 </html>
