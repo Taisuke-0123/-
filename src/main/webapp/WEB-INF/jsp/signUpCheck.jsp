@@ -5,10 +5,11 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<link rel="stylesheet" href="./css/main.css">
 <title>ユーザー登録確認</title>
 </head>
 <body>
-<h2>ユーザー登録確認</h2>
+<h1>ユーザー登録確認</h1>
     
     <%-- セッションスコープからデータを取得 --%>
     <% String userId = (String) session.getAttribute("userId"); %>

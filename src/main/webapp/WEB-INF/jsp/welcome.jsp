@@ -4,12 +4,14 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<link rel="stylesheet" href="./css/main.css">
 <title>誤飲チェッカー</title>
 </head>
 <body>
-<ul>
-<li><a href="LoginServlet">ログイン</a></li>
-<li><a href="SignUpServlet">ユーザー登録</li>
-</ul>
+<h1>ペット誤飲チェッカー</h1>
+	<ul>
+		<li><a href="LoginServlet">ログイン</a></li>
+		<li><a href="SignUpServlet">ユーザー登録</li>
+	</ul>
 </body>
 </html>

@@ -9,19 +9,12 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- * Servlet implementation class CheckerServlet
- */
 @WebServlet("/CheckerServlet")
 public class CheckerServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
+    
     public CheckerServlet() {
         super();
-        // TODO Auto-generated constructor stub
     }
 
 	/**
@@ -43,18 +36,16 @@ public class CheckerServlet extends HttpServlet {
 		//リクエストパラメータを取得
 		request.setCharacterEncoding("UTF-8");
 		String keywords = request.getParameter("keywords");
-//		String option2 = request.getParameter("option2");
-//		String option3 = request.getParameter("option3");
 		
 		//入力された値からそれぞれの画面へフォワード
 		
-		if("危険度：大".equals(keywords)) {//危険度：高へフォワード
+		if("red".equals(keywords)) {//危険度：大へフォワード
 		    RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/jsp/checkResultRed.jsp");
 		    dispatcher.forward(request, response);
-		}else if("危険度：中".equals(keywords)){
+		}else if("yellow".equals(keywords)){//危険度：中へフォワード
 			RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/jsp/checkResultYellow.jsp");
 		    dispatcher.forward(request, response);
-		}else if("危険度：小".equals(keywords)){
+		}else if("green".equals(keywords)){//危険度：小へフォワード
 			RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/jsp/checkResultGreen.jsp");
 		    dispatcher.forward(request, response);
 		}

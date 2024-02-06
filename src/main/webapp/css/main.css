@@ -1,0 +1,62 @@
+@charset "UTF-8";
+
+.center-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f8ff;
+    box-sizing: border-box;
+}
+
+.center-content {
+    max-width: 600px; /* 例：最大幅を600pxに設定 */
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box; /* パディングを含めた全体の幅を設定 */
+}
+
+.right-align {
+    text-align:right;
+    display: block;
+    margin-left: 0; /* 必要に応じて左のマージンを調整 */
+}
+
+.left-align {
+    text-align:left;
+    display: block;
+    margin-left: 0; /* 必要に応じて左のマージンを調整 */
+}
+
+form {
+    background-color: #ffffff; /*入力フォームの背景色を変更*/
+    padding: 30px; /*適切なパディングを指定*/
+    border-radius: 20px; /*角丸スタイル*/
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);/*影の効果*/
+}
+
+form input {
+    border: 1px solid #ccc; /* ボーダーを追加 */
+    padding: 10px; /* パディングを調整 */
+    border-radius: 10px;
+}
+
+form input:focus {
+    outline: none;
+    border-color: #4CAF50; /* フォーカス時のボーダー色を変更 */
+    box-shadow: 0 0 5px rgba(75, 175, 80, 0.5); /* フォーカス時の影を追加 */
+}
+
+.login-form {
+    text-align: right;
+}
+
+body {
+    color: #333;
+    font-size: 20px;
+    font-family: "Yu Gothic", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, Meiryo, sans-serif;
+}
+h1 {border-bottom:solid 4px black ;
+    font-size: 20px;}
+p {font-size: 20px;}
