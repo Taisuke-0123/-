@@ -108,18 +108,15 @@
             option3.text = "髪の毛";
             keywordsSelect.add(option3);
 
-            
         }
-        // 他のカテゴリに対する条件も同様に追加可能
     }
 </script>
 </head>
 <body>
 <h1>ペット誤飲チェッカー</h1>
-<p>ようこそ<c:out value="${userId}"/>さん</p>
-<p><c:out value="${petName}"/>ちゃん</p>
-<p><c:out value="${petBd}"/></p>
-<p><c:out value="${ageYears}"/>歳<c:out value="${ageMonth}"/>か月</p>
+<p>ようこそ<c:out value="${userId}"/>さん、<c:out value="${petName}"/>ちゃん</p>
+<p>誕生日:<c:out value="${petBd}"/></p>
+<p>年齢:<c:out value="${ageYears}"/>歳<c:out value="${ageMonth}"/>か月</p>
 <form action="CheckerServlet" method="post">
     <label for="category">種類選択:</label>
     <select name="category" id="category" onchange="updateKeywords()">
@@ -130,9 +127,7 @@
     </select>
     <br>
     <label for="keywords">キーワード選択:</label>
-    <select name="keywords" id="keywords">
-        <!-- 選択されたカテゴリに基づいて動的に更新される -->
-    </select>
+    <select name="keywords" id="keywords"></select>
     <br>
     <input type="submit" value="検索">
 </form>
