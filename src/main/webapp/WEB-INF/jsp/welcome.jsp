@@ -9,6 +9,7 @@
 </head>
 <body>
 <h1>ペット誤飲チェッカー</h1>
+<p>ペットが誤飲してしまったときに症状と対策を調べることができます。</p>
 	<ul>
 		<li><a href="LoginServlet">ログイン</a></li>
 		<li><a href="SignUpServlet">ユーザー登録</li>

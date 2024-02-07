@@ -68,6 +68,11 @@
             option9.value = "red";
             option9.text = "アボカド";
             keywordsSelect.add(option9);
+
+            var option10 = document.createElement("option");
+            option10.value = "yellow";
+            option10.text = "チーズ";
+            keywordsSelect.add(option10);
             
         } else if (selectedCategory === "category2") {
             // 液体に関連するキーワードを追加
