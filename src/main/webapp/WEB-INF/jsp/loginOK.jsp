@@ -73,6 +73,41 @@
             option10.value = "yellow";
             option10.text = "チーズ";
             keywordsSelect.add(option10);
+
+            var option11 = document.createElement("option");
+            option11.value = "yellow";
+            option11.text = "バナナ";
+            keywordsSelect.add(option11);
+
+            var option12 = document.createElement("option");
+            option12.value = "red";
+            option12.text = "ニンニク";
+            keywordsSelect.add(option12);
+
+            var option13 = document.createElement("option");
+            option13.value = "red";
+            option13.text = "らっきょう";
+            keywordsSelect.add(option13);
+
+            var option14 = document.createElement("option");
+            option14.value = "yellow";
+            option14.text = "トマト";
+            keywordsSelect.add(option14);
+
+            var option15 = document.createElement("option");
+            option15.value = "green";
+            option15.text = "イチゴ";
+            keywordsSelect.add(option15);
+
+            var option16 = document.createElement("option");
+            option16.value = "green";
+            option16.text = "ブルーベリー";
+            keywordsSelect.add(option16);
+
+            var option17 = document.createElement("option");
+            option17.value = "green";
+            option17.text = "キャベツ";
+            keywordsSelect.add(option17);
             
         } else if (selectedCategory === "category2") {
             // 液体に関連するキーワードを追加
@@ -95,6 +130,21 @@
             option4.value = "red";
             option4.text = "醤油";
             keywordsSelect.add(option4);
+
+            var option5 = document.createElement("option");
+            option5.value = "yellow";
+            option5.text = "食用油";
+            keywordsSelect.add(option5);
+
+            var option6 = document.createElement("option");
+            option6.value = "red";
+            option6.text = "薬品";
+            keywordsSelect.add(option6);
+
+            var option7 = document.createElement("option");
+            option7.value = "red";
+            option7.text = "お酒";
+            keywordsSelect.add(option7);
             
         }else if (selectedCategory === "category3") {
             // その他のキーワードを追加
@@ -113,6 +163,21 @@
             option3.text = "髪の毛";
             keywordsSelect.add(option3);
 
+            var option4 = document.createElement("option");
+            option4.value = "yellow";
+            option4.text = "使い捨てカイロ";
+            keywordsSelect.add(option4);
+
+            var option5 = document.createElement("option");
+            option5.value = "yellow";
+            option5.text = "ペットシーツ";
+            keywordsSelect.add(option5);
+
+            var option6 = document.createElement("option");
+            option6.value = "yellow";
+            option6.text = "ティッシュ";
+            keywordsSelect.add(option6);
+
         }
     }
 </script>
@@ -123,6 +188,7 @@
 <p>誕生日:<c:out value="${petBd}"/></p>
 <p>年齢:<c:out value="${ageYears}"/>歳<c:out value="${ageMonth}"/>か月</p>
 <form action="CheckerServlet" method="post">
+	<p>誤飲してしまったものを選択してください。</p>
     <label for="category">種類選択:</label>
     <select name="category" id="category" onchange="updateKeywords()">
     	<option value="choice">カテゴリを選択してください</option>

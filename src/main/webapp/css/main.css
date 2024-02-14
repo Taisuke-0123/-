@@ -30,6 +30,7 @@
 }
 
 form {
+    width: 400px; /* フォームの幅を400pxに設定 */
     background-color: #ffffff; /*入力フォームの背景色を変更*/
     padding: 30px; /*適切なパディングを指定*/
     border-radius: 20px; /*角丸スタイル*/

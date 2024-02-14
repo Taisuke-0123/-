@@ -24,7 +24,7 @@ public class SignUpServlet extends HttpServlet {
 		//ユーザー登録フォームへフォワード
 		RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/jsp/signUp.jsp");
 		dispatcher.forward(request, response);
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+//		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -39,8 +39,6 @@ public class SignUpServlet extends HttpServlet {
 	    // LocalDateに変換（適切なフォーマットが前提）
 	    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 	    LocalDate petBd = LocalDate.parse(dateParameter, formatter);
-	    
-	    
 
 	    // セッションスコープへデータを保存
 	    HttpSession session = request.getSession();
