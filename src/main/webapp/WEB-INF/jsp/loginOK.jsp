@@ -114,6 +114,7 @@
             option18.text = "きな粉";
             keywordsSelect.add(option18);
             
+            
         } else if (selectedCategory === "category2") {
             // 液体に関連するキーワードを追加
         	var option1 = document.createElement("option");
