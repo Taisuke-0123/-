@@ -24,7 +24,6 @@ public class SignUpServlet extends HttpServlet {
 		//ユーザー登録フォームへフォワード
 		RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/jsp/signUp.jsp");
 		dispatcher.forward(request, response);
-//		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

@@ -108,6 +108,11 @@
             option17.value = "green";
             option17.text = "キャベツ";
             keywordsSelect.add(option17);
+
+            var option18 = document.createElement("option");
+            option18.value = "green";
+            option18.text = "きな粉";
+            keywordsSelect.add(option18);
             
         } else if (selectedCategory === "category2") {
             // 液体に関連するキーワードを追加
